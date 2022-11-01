@@ -1,5 +1,11 @@
-<h2>Welcome to Employee Leave System</h2>
+<h1>Welcome to Leaves System</h1>
 
 <nav>
-  <a>Add employee</a>
+  <a routerLink="/departments" routerLinkActive="active">View Departments</a>
+  <br>
+  <a routerLink="/view-employees" routerLinkActive="active">View Employees</a>
+  <br>
+  <a routerLink="/add-employee" routerLinkActive="active">Add Employee</a>
 </nav>
+
+<router-outlet></router-outlet>

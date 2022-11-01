@@ -3,18 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LeaveRequestComponent } from './Employee/leave-request/leave-request.component';
-import { AddEmployeeComponent } from './Manager/add-employee/add-employee.component';
-import { ViewEmployeeComponent } from './Manager/view-employee/view-employee.component';
-import { ViewRequestComponent } from './Manager/view-request/view-request.component';
+import { DepartmentListComponent } from './department-list/department-list.component';
+import { EmployeeListComponent } from './Manager/employee-list/employee-list.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DepartmentDetailComponent } from './department-detail/department-detail.component';
+import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
+import { DepartmentContactComponent } from './department-contact/department-contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LeaveRequestComponent,
-    AddEmployeeComponent,
-    ViewEmployeeComponent,
-    ViewRequestComponent
+    DepartmentListComponent,
+    EmployeeListComponent,
+    PageNotFoundComponent,
+    DepartmentDetailComponent,
+    DepartmentOverviewComponent,
+    DepartmentContactComponent
   ],
   imports: [
     BrowserModule,
