@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-employee',
@@ -11,5 +12,7 @@ export class AddEmployeeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  
 
 }
