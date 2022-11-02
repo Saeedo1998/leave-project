@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './department-list.component.html',
   styleUrls: ['./department-list.component.css']
 })
+
 export class DepartmentListComponent implements OnInit {
 
   public selectedId: any;
@@ -19,7 +20,9 @@ export class DepartmentListComponent implements OnInit {
 
   ]
 
-  departmentData:any;
+
+
+  departmentData:Department[] | any;
 
   constructor(private router: Router,
     private route: ActivatedRoute,
@@ -27,9 +30,10 @@ export class DepartmentListComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.getDepartments().subscribe((data) => {
-      this.departmentData = data;
-    });
+    // this.getDepartments().subscribe((data) => {
+    //   this.departmentData = data;
+    // });
+    this.getDepartments();
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.selectedId = params.get('id');
       this.selectedId = parseInt(this.selectedId);
@@ -39,7 +43,13 @@ export class DepartmentListComponent implements OnInit {
   
 
   getDepartments() {
-    return this.http.get('http://localhost:8082/departments');
+    // return this.http.get('http://localhost:8082/departments');
+    this.http.get<any>('http://localhost:8082/departments').subscribe(
+    response => {
+      console.log(response);
+      this.departmentData = response;
+    }
+  );
   }
 
   onSelect(department: any) {
@@ -55,4 +65,14 @@ export class DepartmentListComponent implements OnInit {
 
 
 
+}
+
+export class Department {
+  constructor(
+    public id: number,
+    public name: string,
+    public address: string,
+    public code: number
+
+  ){}
 }

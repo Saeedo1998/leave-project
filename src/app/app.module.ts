@@ -10,6 +10,9 @@ import { DepartmentDetailComponent } from './department-detail/department-detail
 import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
 import { DepartmentContactComponent } from './department-contact/department-contact.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
 
 @NgModule({
   declarations: [
@@ -24,12 +27,13 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 
-  
+
 })
 
 export class AppModule { }
