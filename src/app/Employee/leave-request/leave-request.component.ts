@@ -1,3 +1,4 @@
+import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +10,16 @@ export class LeaveRequestComponent implements OnInit {
 
   constructor() { }
 
+  requestBody: string | any;
   ngOnInit(): void {
+  }
+
+  sendRequest(){
+    this.requestBody = `{
+        
+
+    }
+    `
   }
 
 }
