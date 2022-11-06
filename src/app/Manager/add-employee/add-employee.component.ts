@@ -10,9 +10,15 @@ export class AddEmployeeComponent implements OnInit {
 
   constructor() { }
 
+  name: string | any;
+
   ngOnInit(): void {
   }
 
+
+  addEmployee(){
+
+  }
   
 
 }

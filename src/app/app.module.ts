@@ -11,6 +11,9 @@ import { DepartmentOverviewComponent } from './department-overview/department-ov
 import { DepartmentContactComponent } from './department-contact/department-contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { RestServiceComponent } from './rest-service/rest-service.component';
+
 
 
 
@@ -23,12 +26,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DepartmentDetailComponent,
     DepartmentOverviewComponent,
     DepartmentContactComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
