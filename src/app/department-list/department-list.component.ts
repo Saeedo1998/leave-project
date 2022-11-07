@@ -11,14 +11,14 @@ import { HttpClient } from '@angular/common/http';
 export class DepartmentListComponent implements OnInit {
 
   public selectedId: any;
-  departments = [
-    { "id": 1, "name": "Angular" },
-    { "id": 2, "name": "Angular2" },
-    { "id": 3, "name": "Angular3" },
-    { "id": 4, "name": "Angular4" },
-    { "id": 5, "name": "Angular5" }
+  // departments = [
+  //   { "id": 1, "name": "Angular" },
+  //   { "id": 2, "name": "Angular2" },
+  //   { "id": 3, "name": "Angular3" },
+  //   { "id": 4, "name": "Angular4" },
+  //   { "id": 5, "name": "Angular5" }
 
-  ]
+  // ]
 
 
 

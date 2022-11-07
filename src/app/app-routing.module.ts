@@ -8,6 +8,7 @@ import { DepartmentOverviewComponent } from './department-overview/department-ov
 import { LeaveRequestComponent } from './Employee/leave-request/leave-request.component';
 import { AddEmployeeComponent } from './Manager/add-employee/add-employee.component';
 import { EmployeeListComponent } from './Manager/employee-list/employee-list.component';
+import { ViewRequestComponent } from './Manager/view-request/view-request.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'view-employees', component: EmployeeListComponent },
   { path: 'add-employee', component: AddEmployeeComponent },
   { path: 'leave-request', component: LeaveRequestComponent },
+  { path: 'view-request', component: ViewRequestComponent },
   { path: "**", component: PageNotFoundComponent }
 ];
 

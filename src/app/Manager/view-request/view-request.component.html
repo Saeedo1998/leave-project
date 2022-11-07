@@ -2,3 +2,48 @@
 
 <br>
 
+<div class="row">
+    <div class="table">
+        <table>
+            <tr>
+                <th>Request ID</th>
+                <th>Employee ID</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Create Date</th>
+            </tr>
+            <tr *ngFor="let req of requestData" (click)="selectedReqId = req.id"
+            [class.active]="req.id === selectedReqId">
+                <td>
+                    {{req.id}}
+                </td>
+                <td>
+                    {{req.employeeId}}
+                </td>
+                <td>
+                    {{req.fromDate}}
+                </td>
+                <td>
+                    {{req.toDate}}
+                </td>
+                <td>
+                    {{req.createDate}}
+                </td>
+                <td>
+                    {{req.action}}
+                </td>
+            </tr>
+        </table>
+        <label [innerText]="reqUpdateText"></label>
+        <br>
+
+        <button (click)="getRequests()">Load</button>
+
+        <br>
+
+        <button (click)="approveRequest()">Approve</button>
+        <button (click)="rejectRequest()">Reject</button>
+
+        <!-- <div class="row" *ngFor="let department of departments"></div> -->
+    </div>
+</div>

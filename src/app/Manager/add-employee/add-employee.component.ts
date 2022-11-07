@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { RestServiceComponent } from 'src/app/rest-service/rest-service.component';
 
 @Component({
   selector: 'app-add-employee',
@@ -8,17 +9,25 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AddEmployeeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service: RestServiceComponent) { }
 
   name: string | any;
+  requestBody: string = "";
 
   ngOnInit(): void {
   }
 
-
-  addEmployee(){
-
+  addEmployee() {
+    
+    this.requestBody = `{
+      "name":"`+ this.name + `",
+      "departmentID":"1"
+  }`;
+    console.log(this.requestBody);
+    this.service.post("http://localhost:8082/employees", JSON.parse(this.requestBody))
+      .subscribe((response) => {
+        console.log(response);
+      });
   }
-  
-
 }
+
