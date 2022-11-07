@@ -11,14 +11,14 @@ export class AddEmployeeComponent implements OnInit {
 
   constructor(private service: RestServiceComponent) { }
 
-  name: string | any;
+  name: string = "";
   requestBody: string = "";
 
   ngOnInit(): void {
   }
 
   addEmployee() {
-    
+    this.name = (<HTMLInputElement>document.getElementById('name')).value;
     this.requestBody = `{
       "name":"`+ this.name + `",
       "departmentID":"1"

@@ -39,8 +39,8 @@ export class ViewRequestComponent implements OnInit {
       return;
     }
     //continue
-    this.service.post('http://localhost:8082/leaverequests/' + action + '?reqID=' + this.selectedReqId, 
-    JSON.parse(this.responseBody)).subscribe(
+    this.http.post('http://localhost:8082/leaverequests/' + action + '?reqID=' + this.selectedReqId, 
+    JSON.parse(this.responseBody), { responseType: 'text' }).subscribe(
       (response: string) => {
         console.log(response);
         this.reqUpdateText = response;
@@ -64,7 +64,7 @@ export class ViewRequestComponent implements OnInit {
 export class LeaveRequest {
   constructor(
     public id: number,
-    public employeeId: string,
+    public employeeID: string,
     public fromDate: Date,
     public toDate: Date,
     public CreateDate: Date,

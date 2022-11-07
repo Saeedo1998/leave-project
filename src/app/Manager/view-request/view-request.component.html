@@ -11,6 +11,7 @@
                 <th>From</th>
                 <th>To</th>
                 <th>Create Date</th>
+                <th>Action</th>
             </tr>
             <tr *ngFor="let req of requestData" (click)="selectedReqId = req.id"
             [class.active]="req.id === selectedReqId">
@@ -18,7 +19,7 @@
                     {{req.id}}
                 </td>
                 <td>
-                    {{req.employeeId}}
+                    {{req.employeeID}}
                 </td>
                 <td>
                     {{req.fromDate}}
