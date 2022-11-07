@@ -9,7 +9,7 @@ import { RestServiceComponent } from 'src/app/rest-service/rest-service.componen
 })
 export class AddEmployeeComponent implements OnInit {
 
-  constructor(public service: RestServiceComponent) { }
+  constructor(private service: RestServiceComponent) { }
 
   name: string | any;
   requestBody: string = "";
