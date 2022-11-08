@@ -6,6 +6,7 @@ import { DepartmentDetailComponent } from './department-detail/department-detail
 import { DepartmentListComponent } from './department-list/department-list.component';
 import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
 import { LeaveRequestComponent } from './Employee/leave-request/leave-request.component';
+import { LeaveTypesComponent } from './leave-types/leave-types.component';
 import { AddEmployeeComponent } from './Manager/add-employee/add-employee.component';
 import { EmployeeListComponent } from './Manager/employee-list/employee-list.component';
 import { ViewRequestComponent } from './Manager/view-request/view-request.component';
@@ -13,7 +14,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 const routes: Routes = [
   //default redirect
-  // { path: '', pathMatch: 'full', redirectTo: '/departments' },
+  { path: '', pathMatch: 'full', redirectTo: '/departments' },
   { path: 'departments', component: DepartmentListComponent },
   {
     path: 'departments/:id', component: DepartmentDetailComponent,
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'add-employee', component: AddEmployeeComponent },
   { path: 'leave-request', component: LeaveRequestComponent },
   { path: 'view-request', component: ViewRequestComponent },
+  { path: 'leave-types', component: LeaveTypesComponent },
   { path: "**", component: PageNotFoundComponent }
 ];
 

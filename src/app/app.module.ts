@@ -15,6 +15,8 @@ import { FormsModule } from '@angular/forms';
 import { RestServiceComponent } from './rest-service/rest-service.component';
 import { ViewRequestComponent } from './Manager/view-request/view-request.component';
 import { AddEmployeeComponent } from './Manager/add-employee/add-employee.component';
+import { LeaveTypesComponent } from './leave-types/leave-types.component';
+import { AddLeaveTypeComponent } from './leave-types/add-leave-type/add-leave-type.component';
 
 
 
@@ -30,6 +32,8 @@ import { AddEmployeeComponent } from './Manager/add-employee/add-employee.compon
     DepartmentContactComponent,
     ViewRequestComponent,
     AddEmployeeComponent,
+    LeaveTypesComponent,
+    AddLeaveTypeComponent,
     
   ],
   imports: [

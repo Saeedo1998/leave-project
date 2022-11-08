@@ -1,0 +1,8 @@
+<div class="child">
+    <h2>Child Component</h2>
+    <p>@Input test: <span #inputTest>{{leaveType}}</span></p>
+    <label for="leave-type-input">Add a leave type: </label>
+    <input type="text" id="leave-type-input" #newLeaveType>
+    <button (click)="addNewLeaveType(newLeaveType.value)">Add</button>
+    <!-- ; newBeverage.value='' -->
+</div>

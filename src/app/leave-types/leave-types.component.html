@@ -1,0 +1,12 @@
+<div class="parent">
+
+    <h2>Parent Component</h2>
+    
+    <ul>
+      <li *ngFor="let type of leaveTypes">{{type}} Leave</li>
+    </ul>
+
+    <app-add-leave-type [leaveType]="currentLeaveType" (newLeaveTypeEvent)="addLeaveType($event)">
+  
+    </app-add-leave-type>
+  </div>
