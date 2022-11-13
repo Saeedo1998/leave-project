@@ -17,12 +17,13 @@ export class EmployeeListComponent implements OnInit {
   }
 
   getEmployees() {
+    // this.http.get<any>('http://localhost:8082/employeesWithDeptName').subscribe(
     this.http.get<any>('http://localhost:8082/employees').subscribe(
-    response => {
-      console.log(response);
-      this.employeeData = response;
-    }
-  );
+      response => {
+        console.log(response);
+        this.employeeData = response;
+      }
+    );
   }
 
 
@@ -31,6 +32,8 @@ export class EmployeeListComponent implements OnInit {
 export class Employee {
   constructor(
     public id: number,
-    public name: string
-  ){}
+    public name: string,
+    public departmentID: string,
+    public departmentName: string
+  ) { }
 }

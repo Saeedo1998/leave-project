@@ -12,6 +12,7 @@ import { DepartmentContactComponent } from './department-contact/department-cont
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RestServiceComponent } from './rest-service/rest-service.component';
 import { ViewRequestComponent } from './Manager/view-request/view-request.component';
 import { AddEmployeeComponent } from './Manager/add-employee/add-employee.component';
@@ -41,7 +42,8 @@ import { AddLeaveTypeComponent } from './leave-types/add-leave-type/add-leave-ty
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

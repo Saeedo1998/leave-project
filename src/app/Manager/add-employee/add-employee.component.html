@@ -1,11 +1,23 @@
 <h2>Add Employee</h2>
 
 <div class="row">
-    <label for="name">Name:</label>
-    <input id="name" [(ngModel)]="name">
-    <br>
-    <br>
-    <hr>
-    <br>
-    <button (click)="addEmployee()">Add New Employee</button>
+    <form [formGroup]="employeeForm" (ngSubmit)="addEmployee()">
+
+        <label for="name">Name:</label>
+        <input type="text" formControlName="name">
+        <br>
+        <label for="deptID">Department:</label>
+        <select #deptID formControlName="selectedDeptID">
+            <option value="">Choose a department</option>
+            <option *ngFor="let dept of departmentData" [value]="dept.id">{{dept.name}}</option>
+        </select>
+
+        <br>
+        <hr>
+        <br>
+        <br>
+        <button type="submit" [disabled]="!employeeForm.valid">Add New Employee</button>
+    </form>
+    <label [(ngModel)]="validationMsg" ngDefaultControl></label>
+
 </div>
